@@ -45,7 +45,8 @@ describe('[Challenge] Unstoppable', function () {
 
     it('Execution', async function () {
         /** CODE YOUR SOLUTION HERE */
-        await token.connect(player).transfer(vault.address, 1);
+        // Sending just 2 Wei, although even 1 Wei should be enough
+        await token.connect(player).transfer(vault.address, 2);
     });
 
     after(async function () {
