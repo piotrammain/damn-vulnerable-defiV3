@@ -30,7 +30,7 @@ For this challenge, 'DVT' is the underlying token, and the vault token is deploy
 
 Issues Identified:
 
-The condition (convertToShares(totalSupply) != balanceBefore) enforces that the totalSupply of vault tokens must always equal the totalAsset of underlying tokens before any flash loan execution. This condition becomes problematic if there are alternative vault implementations diverting asset tokens to other contracts, rendering the flashLoan function inactive.
+The condition ```solidity(convertToShares(totalSupply) != balanceBefore)``` enforces that the totalSupply of vault tokens must always equal the totalAsset of underlying tokens before any flash loan execution. This condition becomes problematic if there are alternative vault implementations diverting asset tokens to other contracts, rendering the flashLoan function inactive.
 
 The totalAssets function is overridden to always return the balance of the vault contract (asset.balanceOf(address(this))). This introduces a separate accounting system based on tracking the supply of vault tokens.
 
