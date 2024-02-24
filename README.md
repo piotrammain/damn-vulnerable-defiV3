@@ -21,7 +21,7 @@ The flashLoan function contains a vulnerability identified as follows:
 ```solidity
 uint256 balanceBefore = totalAssets();
 if (convertToShares(totalSupply) != balanceBefore) revert InvalidBalance();
-
+```
 Explanation:
 
 ERC4626 introduces a standard for tokenized vaults that track user deposit shares to determine rewards for staked tokens. In this context, the asset represents the underlying token deposited/withdrawn into the vault, while the share signifies the vault tokens minted/burned to represent user deposits.
