@@ -18,7 +18,7 @@ The primary objective of the initial challenge is to execute a Denial of Service
 Vulnerability in flashLoan Function:
 
 The flashLoan function contains a vulnerability identified as follows:
-
+```solidity
 uint256 balanceBefore = totalAssets();
 if (convertToShares(totalSupply) != balanceBefore) revert InvalidBalance();
 
